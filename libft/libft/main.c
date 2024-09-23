@@ -1,4 +1,4 @@
-//#include "libft.h"
+#include "libft.h"
 #include <stdio.h>
 
 /*// Teste ft_isalpha
@@ -31,7 +31,7 @@ int     main(void)
         }
 }*/
 
-// Teste ft_isalnum
+/*// Teste ft_isalnum
 int     main(void)
 {
         int     alnum = '7';
@@ -42,5 +42,19 @@ int     main(void)
         else
         {
                 printf("%i it's not an alphanumeric\n", alnum);
+        }
+}*/
+
+// Teste ft_isascii
+int     main(void)
+{
+        int     asc = 's';
+        if (ft_isascii(asc) != 0)
+        {
+                printf("%i it's an alphanumeric\n", asc);
+        }
+        else
+        {
+                printf("%i it's not an alphanumeric\n", asc);
         }
 }
