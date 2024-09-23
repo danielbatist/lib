@@ -1,10 +1,10 @@
-#include "libft.h"
+//#include "libft.h"
 #include <stdio.h>
 
-// Teste ft_isalpha
+/*// Teste ft_isalpha
 int     main(void)
 {
-        char    c = '9';
+        char    c = 'a';
         if (ft_isalpha(c) != 0)
         {
                 printf("%c is an alphabetic character\n", c);
@@ -15,10 +15,10 @@ int     main(void)
         }
 
         return (0);
-}
+}*/
 
-// Teste ft_digit
-/*int     main(void)
+/*// Teste ft_isdigit
+int     main(void)
 {
         int     num = 9;
         if (ft_isdigit(num) != 0)
@@ -30,3 +30,17 @@ int     main(void)
                 printf("%i it's not a number\n", num);
         }
 }*/
+
+// Teste ft_isalnum
+int     main(void)
+{
+        int     alnum = '7';
+        if (ft_isalnum(alnum) != 0)
+        {
+                printf("%i it's an alphanumeric\n", alnum);
+        }
+        else
+        {
+                printf("%i it's not an alphanumeric\n", alnum);
+        }
+}
