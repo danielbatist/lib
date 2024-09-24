@@ -1,7 +1,8 @@
 #include "libft.h"
 #include <stdio.h>
 
-/*// Teste ft_isalpha
+// Teste ft_isalpha
+/*
 int     main(void)
 {
         char    c = 'a';
@@ -17,7 +18,8 @@ int     main(void)
         return (0);
 }*/
 
-/*// Teste ft_isdigit
+// Teste ft_isdigit
+/*
 int     main(void)
 {
         int     num = 9;
@@ -32,7 +34,8 @@ int     main(void)
 }*/
 
 // Teste ft_isalnum
-/*int     main(void)
+/*
+int     main(void)
 {
         int     alnum1 = '7';
         int     alnum2 = 'a';
@@ -53,7 +56,8 @@ int     main(void)
 }*/
 
 // Teste ft_isascii
-/*int     main(void)
+/*
+int     main(void)
 {
         unsigned char     asc1 = 57; // character '9'
         unsigned char     asc2 = 32; // character ' '
@@ -73,6 +77,8 @@ int     main(void)
                 printf("%i doesn't belong to the ascii table\n", asc3);
 }*/
 
+// Teste ft_isprint
+/*
 int     main(void)
 {
         unsigned char     imp1 = '\n'; // character '9'
@@ -91,4 +97,52 @@ int     main(void)
                 printf("%i is a printable character\n", imp3);
         else
                 printf("%i is not a printable character\n", imp3);
+}*/
+
+// Teste ft_strlen
+/*
+int     main(void)
+{
+        char    str[] = "Hello World";
+        printf("%zu\n", ft_strlen(str));
+        return (0);
+}*/
+
+// Teste ft_strlcpy
+/*
+int     main(void)
+{
+        char    dst[20];
+        char    src[] = "Hello World";
+        unsigned int result = ft_strcpy(dst, src, sizeof(dst));
+        printf("%s", dst);
+        printf("%i", result);
+}*/
+
+// Teste ft_strlcpy
+
+
+#include <stdlib.h>
+int     main(void)
+{
+        size_t  n = 1;
+        char    *dst = (char *)malloc(n * sizeof(char));
+        if (dst == NULL)
+        {
+                printf("Allocation Failed");
+        }
+        //char    dst[15];
+        const char  src[] = "Hello World";
+        size_t result = ft_strlcpy(dst, src, sizeof(dst));
+        if (sizeof(dst) < result)
+        {
+                printf("string truncation\n");
+                printf("%s\n", dst);
+                printf("%zu\n", result);
+        }
+        else
+        {
+                printf("%s\n", dst);
+                printf("%zu\n", result);
+        }
 }
