@@ -2,7 +2,7 @@
 
 int     ft_isascii(int c)
 {
-    if (c < 128)
+    if (c >= 0 && c <= 127)
     {
         return (1);
     }
@@ -10,17 +10,17 @@ int     ft_isascii(int c)
         return (0);
     }
 }
-#include <stdio.h>
+/*#include <stdio.h>
 
 int     main(void)
 {
-        int     asc = 's';
+        unsigned char     asc = 's';
         if (ft_isascii(asc) != 0)
         {
-                printf("%i it's an alphanumeric\n", asc);
+                printf("%i belongs to the ascii table\n", asc);
         }
         else
         {
-                printf("%i it's not an alphanumeric\n", asc);
+                printf("%i belongs to the ascii table\n", asc);
         }
-}
+}*/

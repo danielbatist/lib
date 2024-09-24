@@ -31,30 +31,64 @@ int     main(void)
         }
 }*/
 
-/*// Teste ft_isalnum
-int     main(void)
+// Teste ft_isalnum
+/*int     main(void)
 {
-        int     alnum = '7';
-        if (ft_isalnum(alnum) != 0)
-        {
-                printf("%i it's an alphanumeric\n", alnum);
-        }
+        int     alnum1 = '7';
+        int     alnum2 = 'a';
+        int     alnum3 = '@';
+
+        if (ft_isalnum(alnum1) != 0)
+                printf("%c it's an alphanumeric\n", alnum1);
         else
-        {
-                printf("%i it's not an alphanumeric\n", alnum);
-        }
+                printf("%c it's not an alphanumeric\n", alnum1);
+        if (ft_isalnum(alnum2) != 0)
+                printf("%c it's an alphanumeric\n", alnum2);
+        else
+                printf("%c it's not an alphanumeric\n", alnum2);
+        if (ft_isalnum(alnum3) != 0)
+                printf("%c it's an alphanumeric\n", alnum3);
+        else
+                printf("%c it's not an alphanumeric\n", alnum3);
 }*/
 
 // Teste ft_isascii
+/*int     main(void)
+{
+        unsigned char     asc1 = 57; // character '9'
+        unsigned char     asc2 = 32; // character ' '
+        unsigned char     asc3 = 130; // character 'é'
+
+        if (ft_isascii(asc1) != 0)
+                printf("%i belongs to the ascii table\n", asc1);
+        else
+                printf("%i doesn't belong to the ascii table\n", asc1);
+        if (ft_isascii(asc2) != 0)
+                printf("%i belongs to the ascii table\n", asc2);
+        else
+                printf("%i doesn't belong to the ascii table\n", asc2);
+        if (ft_isascii(asc3) != 0)
+                printf("%i belongs to the ascii table\n", asc3);
+        else
+                printf("%i doesn't belong to the ascii table\n", asc3);
+}*/
+
 int     main(void)
 {
-        int     asc = 's';
-        if (ft_isascii(asc) != 0)
-        {
-                printf("%i it's an alphanumeric\n", asc);
-        }
+        unsigned char     imp1 = '\n'; // character '9'
+        unsigned char     imp2 = 32; // character ' '
+        unsigned char     imp3 = '\t'; // character 'é'
+
+        if (ft_isprint(imp1) != 0)
+                printf("%i is a printable character\n", imp1);
         else
-        {
-                printf("%i it's not an alphanumeric\n", asc);
-        }
+                printf("%i is not a printable character\n", imp1);
+        if (ft_isprint(imp2) != 0)
+                printf("%i is a printable character\n", imp2);
+        else
+                printf("%i is not a printable character\n", imp2);
+        if (ft_isprint(imp3) != 0)
+                printf("%i is a printable character\n", imp3);
+        else
+                printf("%i is not a printable character\n", imp3);
 }

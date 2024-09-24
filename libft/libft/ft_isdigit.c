@@ -1,4 +1,4 @@
-//#include "libft.h"
+#include "libft.h"
 
 int     ft_isdigit(int c)
 {
@@ -11,17 +11,3 @@ int     ft_isdigit(int c)
         return 0;
     }
 }
-/*#include <stdio.h>
-
-int     main(void)
-{
-        int     num = '0';
-        if (ft_isdigit(num) != 0)
-        {
-                printf("%c it's a number\n", num);
-        }
-        else
-        {
-                printf("%c it's not a number\n", num);
-        }
-}*/
