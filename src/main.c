@@ -2,7 +2,6 @@
 #include <stdio.h>
 
 // Teste ft_isalpha
-/*
 int     main(void)
 {
         char    c = 'a';
@@ -16,7 +15,7 @@ int     main(void)
         }
 
         return (0);
-}*/
+}
 
 // Teste ft_isdigit
 /*
@@ -121,17 +120,11 @@ int     main(void)
 
 // Teste ft_strlcpy
 
-
+/*
 #include <stdlib.h>
 int     main(void)
 {
-        size_t  n = 1;
-        char    *dst = (char *)malloc(n * sizeof(char));
-        if (dst == NULL)
-        {
-                printf("Allocation Failed");
-        }
-        //char    dst[15];
+        char    dst[15];
         const char  src[] = "Hello World";
         size_t result = ft_strlcpy(dst, src, sizeof(dst));
         if (sizeof(dst) < result)
@@ -146,3 +139,4 @@ int     main(void)
                 printf("%zu\n", result);
         }
 }
+*/

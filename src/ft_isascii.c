@@ -10,17 +10,3 @@ int     ft_isascii(int c)
         return (0);
     }
 }
-/*#include <stdio.h>
-
-int     main(void)
-{
-        unsigned char     asc = 's';
-        if (ft_isascii(asc) != 0)
-        {
-                printf("%i belongs to the ascii table\n", asc);
-        }
-        else
-        {
-                printf("%i belongs to the ascii table\n", asc);
-        }
-}*/
