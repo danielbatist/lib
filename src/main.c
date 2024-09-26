@@ -140,3 +140,13 @@ int     main(void)
         }
 }
 */
+// Teste ft_atoi
+/*
+#include <stdlib.h>
+int     main(void)
+{
+    const char  str[] = "   +-1234";
+    printf("%i\n", atoi(str));
+    printf("%i\n", ft_atoi(str));
+}
+*/
