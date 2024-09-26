@@ -6,7 +6,10 @@ NAME = libft.a
 
 SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c\
       ft_isdigit.c ft_isprint.c ft_strlcpy.c\
-	  ft_strlen.c ft_atoi.c\
+	  ft_strlen.c  ft_atoi.c    ft_strlcat.c \
+	  ft_strncmp.c ft_toupcase.c ft_tolower\
+	  ft_strchr\
+	  
 
 
 OBJ = $(SRC:.c=.o)

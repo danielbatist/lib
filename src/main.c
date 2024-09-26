@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 // Teste ft_isalpha
+/*
 int     main(void)
 {
         char    c = 'a';
@@ -16,8 +17,10 @@ int     main(void)
 
         return (0);
 }
+*/
 
 // Teste ft_isdigit
+
 /*
 int     main(void)
 {
@@ -99,24 +102,15 @@ int     main(void)
 }*/
 
 // Teste ft_strlen
+
 /*
 int     main(void)
 {
         char    str[] = "Hello World";
         printf("%zu\n", ft_strlen(str));
         return (0);
-}*/
-
-// Teste ft_strlcpy
-/*
-int     main(void)
-{
-        char    dst[20];
-        char    src[] = "Hello World";
-        unsigned int result = ft_strcpy(dst, src, sizeof(dst));
-        printf("%s", dst);
-        printf("%i", result);
-}*/
+}
+*/
 
 // Teste ft_strlcpy
 
@@ -140,7 +134,9 @@ int     main(void)
         }
 }
 */
+
 // Teste ft_atoi
+
 /*
 #include <stdlib.h>
 int     main(void)
@@ -148,5 +144,96 @@ int     main(void)
     const char  str[] = "   +-1234";
     printf("%i\n", atoi(str));
     printf("%i\n", ft_atoi(str));
+}
+*/
+
+// Teste ft_strlcat
+
+/*
+int     main(void)
+{
+    char    dst[8] = "Hello ";
+    const char    src[] = "World";
+    size_t result = ft_strlcat(dst, src, sizeof(dst));
+        if (sizeof(dst) < result)
+        {
+                printf("string truncation\n");
+                printf("%s\n", dst);
+                printf("%zu\n", result);
+        }
+        else
+        {
+                printf("%s\n", dst);
+                printf("%zu\n", result);
+        }
+}
+*/
+
+// Teste ft_strncmp
+
+/*
+int     main(void)
+{
+        const char  str1[] = "Hello";
+        const char  str2[] = "Hell";
+        const char  str3[] = "World";
+        const char  str4[] = "Work";
+
+        printf("%i\n" , ft_strncmp(str1, str2, 5));
+        printf("%i\n" , ft_strncmp(str1, str3, 3));
+        printf("%i\n" , ft_strncmp(str3, str4, 3));
+        printf("%i\n" , ft_strncmp(str4, str1, 2));
+}*/
+
+// Teste ft_toupper
+
+/*
+int     main(void)
+{
+        char    letter = 'a';
+        int result = ft_toupper(letter);
+        if (result == letter)
+            printf("No need to convert to uppercase: %c\n", result);
+        else
+            printf("letter converted to uppercase: %c\n", result);
+        return(0);
+}
+*/
+
+// Teste ft_tolower
+
+/*
+int     main(void)
+{
+        char    letter = 'L';
+        int result = ft_tolower(letter);
+        if (result == letter)
+            printf("No need to convert to lowercase: %c\n", result);
+        else
+            printf("letter converted to lowercase: %c\n", result);
+        return(0);
+}
+*/
+
+// Teste ft_strchr
+
+/*
+#include <stdio.h>
+
+int     main(void)
+{
+        const char str[] = "Hello World";
+        int     letter = 'y';
+        char    *result = ft_strchr(str, letter);
+
+        if (result != NULL)
+        {
+            printf("Character %c found at position: %ld\n", letter, result - str);
+        }
+        else{
+            printf("Character %c not found\n", letter);
+        }
+
+        return (0);
 }
 */
