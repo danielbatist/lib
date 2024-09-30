@@ -417,3 +417,79 @@ int     main(void)
         return (0);
 }
 */
+
+// Teste ft_memcpy
+
+/*
+int     main(void)
+{
+    // Teste 01
+        printf("Teste 01: ");
+        char    src[] = "Hello World";
+        char    dst[20];
+        size_t  len = 9;
+        ft_memcpy(dst, src, len);
+        dst[len] = '\0';
+        printf("%s\n\n", dst);
+
+    // Teste 02
+
+        printf("Teste 02: ");
+        int     src1[] = {1, 2, 3, 4, 5};
+        int     dst1[20];
+        ft_memcpy(dst1, src1, sizeof(src1));
+        for(size_t i = 0; i < 5; i++)
+        {
+            printf("%d", dst1[i]);
+        }
+        printf("\n\n");
+        
+    // Teste 03
+
+        printf("Teste 03: ");
+        char dest[10];
+        char src2[10];
+
+        ft_memset(src2, 0, sizeof(src2));
+        ft_memcpy(dest, src2, 10);
+        for(int i = 0; i < 10; i++)
+        {
+            printf("%d", dest[i]);
+        }
+        return (0);
+}
+*/
+
+// ft_memmove
+
+/*
+int     main(void)
+{
+        printf("Teste 01: ");
+        char    src[] = "HelloWorld";
+        ft_memmove(src + 5, src, 5);
+        printf("%s\n", src);
+
+        printf("Teste 02: ");
+        char    src1[] = "42 rio";
+        char    dest1[15];
+        ft_memmove(dest1, src1, sizeof(src1));
+        printf("%s\n", dest1);
+
+        printf("Teste 03: ");
+        char    src2[] = "Hello World";
+        char    dest2[] = "banana";
+        ft_memmove(dest1, src1, 0);
+        printf("%s\n", dest2);
+
+        printf("Teste 04: ");
+        char    src3[] = {1, 2, 3, 4, 5, 6, 7, 8};
+        ft_memmove(src3 + 3, src3, 6);
+        for (int i = 0; i < 8; i++)
+        {
+            printf("%d ", src3[i]);
+        }
+        printf("\n");
+        return(0);
+}
+*/
