@@ -23,22 +23,3 @@ size_t  ft_strlcat(char *dest, const char *src, size_t size)
     dest[len + i] = '\0';
     return (len + src_len) ;
 }
-#include <stdio.h>
-
-int     main(void)
-{
-    char    dst[8] = "Hello ";
-    const char    src[] = "World";
-    size_t result = ft_strlcat(dst, src, sizeof(dst));
-        if (sizeof(dst) < result)
-        {
-                printf("string truncation\n");
-                printf("%s\n", dst);
-                printf("%zu\n", result);
-        }
-        else
-        {
-                printf("%s\n", dst);
-                printf("%zu\n", result);
-        }
-}
