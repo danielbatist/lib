@@ -3,13 +3,11 @@
 void    *ft_memchr(const void *s, int c, size_t n)
 {
         unsigned char *ptr;
-        unsigned char oc;
 
         ptr = (unsigned char*)s;
-        oc = (unsigned char)c;
         while (n > 0)
         {
-            if(*ptr == oc)
+            if(*ptr == (unsigned char)c)
             {
                 return (void *)ptr;
             }
@@ -23,7 +21,7 @@ void    *ft_memchr(const void *s, int c, size_t n)
 int     main(void)
 {
         char    str[] = "Hello World";
-        char    ocr = 'p';
+        char    ocr = 'o';
         char    *result = ft_memchr(str, ocr, 10);
         if (result != NULL)
         {
