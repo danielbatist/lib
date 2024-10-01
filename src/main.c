@@ -115,7 +115,6 @@ int     main(void)
 // Teste ft_strlcpy
 
 /*
-#include <stdlib.h>
 int     main(void)
 {
         char    dst[15];
@@ -296,9 +295,9 @@ int     main(void)
 /*
 int     main(void)
 {
+        //Teste 1
         size_t      i;
         char        str1[12] = "Hello World";
-        //Teste 1
         printf("Teste 1\n"); 
         printf("Before: %s\n", str1);
         ft_bzero(str1, 5);
@@ -493,3 +492,180 @@ int     main(void)
         return(0);
 }
 */
+
+// Teste ft_memchr
+
+/*
+int     main(void)
+{
+        char    str[] = "Hello World";
+        char    ocr = 'o';
+        char    *result = ft_memchr(str, ocr, 10);
+        if (result != NULL)
+        {
+            printf("The first occurrence of %c is in the position: %ld\n", ocr, result - str);
+        }
+        else
+        {
+        printf("The character %c not a found.\n", ocr);
+        }
+
+    
+}
+*/
+
+// Teste ft_memcmp
+
+/*
+int     main(void)
+{
+        char    str1[] = "Hello World";
+        char    str2[] = "Minishell";
+        char    str3[] = "Minihell";
+        char    str4[] = "Hello World";
+
+        int     res1 = ft_memcmp(str1, str2, 5);
+        printf("ft_memcmp entre Hello World e Minishell: %i\n", res1);
+        int     res2 = ft_memcmp(str2, str3, 3);
+        printf("ft_memcmp entre Minishell e Minhell: %i\n", res2);
+        int     res3 = ft_memcmp(str3, str4, 6);
+        printf("ft_memcmp entre Minihell e Hello World: %i\n", res3);
+        int     res4 = ft_memcmp(str1, str4, 3);
+        printf("ft_memcmp entre Hello World e Hello World: %i\n", res4);
+        return (0);
+}
+*/
+
+// Teste ft_strdup
+/*
+int     main(void)
+{
+        printf("Teste 01\n");
+        char    str1[] = "Hello World";
+        char    *cpy1 = ft_strdup(str1);
+        printf("str1: %s\n", str1);
+        if (cpy1 != NULL)
+        {
+            printf("cpy1: %s", cpy1);
+        }
+        else
+        {
+            printf("Error!");
+        }
+        free(cpy1);
+
+        printf("\n\n");
+
+        printf("Teste 02\n");
+        char    str2[] = "";
+        char    *cpy2 = ft_strdup(str2);
+        printf("str2: %s\n", str2);
+        if (cpy2 != NULL)
+        {
+            printf("cpy2: %s", cpy2);
+        }
+        else
+        {
+            printf("Error!");
+        }
+        free(cpy2);
+
+        printf("\n\n");
+
+        printf("Teste 03\n");
+        char str3[] = "Lebenslanger Schicksalschatz";
+        char    *cpy3 = ft_strdup(str3);
+        printf("str3: %s\n", str3);
+        if (cpy3 != NULL)
+        {
+            printf("cpy3: %s", cpy3);
+        }
+        else
+        {
+            printf("Error!");
+        }
+        free(cpy3);
+
+        printf("\n\n");
+
+        printf("Teste 04\n");
+        char str4[] = "A very long string to check if the allocation and copying are correct";
+        char    *cpy4 = ft_strdup(str4);
+        printf("str4: %s\n", str4);
+        if (cpy4 != NULL)
+        {
+            printf("cpy4: %s", cpy4);
+        }
+        else
+        {
+            printf("Error!");
+        }
+        free(cpy4);
+
+        printf("\n");
+        return (0);
+}*/
+
+// Teste ft_calloc
+
+/*
+int     main(void)
+{
+        printf("Teste 01\n");
+        size_t  n1 = 5;
+        int     *arr1 = (int *)ft_calloc(n1 , sizeof(int));
+        if (arr1 != NULL && n1 > 0)
+        {
+                for (size_t i = 0; i < n1; i++)
+                {
+                        printf("%i", arr1[i]);
+                }
+        }
+        else
+        {
+                printf("memory allocation failure");
+        }
+        free(arr1);
+
+        printf("\n\n");
+
+        printf("Teste 02\n");
+        size_t  n2 = 4294967296;
+        int     *arr2 = (int *)ft_calloc(n2 , 4294967296);
+        if (arr2 != NULL && n2 > 0)
+        {
+                for (size_t i = 0; i < n2; i++)
+                {
+                        printf("%i", arr2[i]);
+                }
+        }
+        else
+        {
+                printf("memory allocation failure");
+        }
+        free(arr2);
+
+        printf("\n\n");
+
+        printf("Teste 03\n");
+        size_t  n3 = 0;
+        int     *arr3 = (int *)ft_calloc(n3 , 4);
+        if (arr3 != NULL && n3 > 0)
+        {
+                for (size_t i = 0; i < n3; i++)
+                {
+                        printf("%i", arr3[i]);
+                }
+        }
+        else
+        {
+                printf("memory allocation failure");
+        }
+        free(arr3);
+
+        printf("\n\n");
+
+
+        
+        return(0);
+}*/
