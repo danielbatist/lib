@@ -669,3 +669,43 @@ int     main(void)
         
         return(0);
 }*/
+
+// Teste ft_substr
+
+/*
+int		main(void)
+{
+	char const	*str = "Hello World";
+	unsigned int	pos = 6;
+	char	*res = ft_substr(str, pos, 5);
+	printf("string: %s\n", str);
+	printf("substring: %s\n", res);
+	return (0);
+}
+*/
+
+// Teste ft_strjoin
+
+/*
+int		main(void)
+{
+	char	*str1 = "Hello ";
+	char	*str2 = "World";
+	char	*res = ft_strjoin(str1, str2);
+	printf("New string: %s\n", res);
+	free(res);
+	return (0);
+}
+*/
+
+// Teste ft_strtrim
+ /*
+ int		main(void)
+{
+	char	*str = "        Hello World         ";
+	char	*set  = " ";
+	char	*res = ft_strtrim(str, set);
+	printf("res:%s\n", res);
+	return (0);
+}
+ */
