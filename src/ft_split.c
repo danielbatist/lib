@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/03 11:51:28 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/03 23:17:59 by dbatista         ###   ########.fr       */
+/*   Created: 2024/10/06 23:46:01 by dbatista          #+#    #+#             */
+/*   Updated: 2024/10/07 00:17:08 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	**ft_split(char const *s, char c)
 {
-	size_t	start;
-	size_t	end;
-	char	*str;
+	int		i;
+	int		str_len = conts(s, c);
+	
+}
 
-	end = ft_strlen(s1);
-	start = 0;
-	while (s1[start] && ft_strchr(set, s1[start]))
-		start++;
-	while (end > start && ft_strchr(set, s1[end - 1]))
-		end--;
-	str = malloc((end - start + 1) * sizeof(char));
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, &s1[start], (end - start + 1));
-	return (str);
+#include <stdio.h>
+
+int		main(void)
+{
+	char	*str = "Hello,world,this,is,teste";
+	char	set = ',';
+	char	**res = ft_split(str, set);
+	return (0);
 }
