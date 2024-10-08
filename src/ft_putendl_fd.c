@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 00:40:07 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/08 00:45:01 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/08 09:54:47 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putstr_fd(s, fd);
 	ft_putstr_fd("\n", fd);
 }
-
+/*
 int	main(void)
 {
 	char	str[] = "Hello World";
 	ft_putendl_fd(str, 1);
-}
+}*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 00:49:55 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/08 01:25:43 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/08 09:53:44 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ void	ft_putnbr_fd(int n, int fd)
 	ft_putchar_fd('\n', fd);
 }
 
+/*
 int	main(void)
 {
 	ft_putnbr_fd(42, 1);
-}
+}*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 23:46:01 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/07 23:31:53 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/08 18:10:38 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,21 +106,3 @@ char	**ft_split(char const *str, char set)
 	mat[world_str] = NULL;
 	return (mat);
 }
-/*
-#include <stdio.h>
-
-int		main(void)
-{
-	char	*str = "Hello;world;this;is;test;banana;42;rio";
-	char	set = ';';
-	char	**res = ft_split(str, set);
-	int		i;
-
-	i = 0;
-	while (res[i])
-	{
-		printf ("str[%i] : %s\n", i, res[i]);
-		i++;
-	}
-	return (0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 22:40:09 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/03 10:17:44 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/08 18:48:22 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
 	unsigned char	*sub;
+	size_t			i;
 
 	if (s == NULL || start >= ft_strlen(s))
 		return (NULL);

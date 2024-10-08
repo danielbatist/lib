@@ -763,3 +763,100 @@ int		main(void)
 	return (0);
 }
 */
+
+// Teste ft_split
+
+/*
+#include <stdio.h>
+
+int		main(void)
+{
+	char	*str = "Hello;world;this;is;test;banana;42;rio";
+	char	set = ';';
+	char	**res = ft_split(str, set);
+	int		i;
+
+	i = 0;
+	while (res[i])
+	{
+		printf ("str[%i] : %s\n", i, res[i]);
+		i++;
+	}
+	return (0);
+}*/
+
+// Teste ft_lstnew
+
+/*
+#include <stdio.h>
+
+int     main(void)
+{
+    char    *nome = "Hello World";
+    t_list *str = ft_lstnew(nome);
+    printf("%s\n", (char *)str->content);
+
+}*/
+
+// Teste ft_lstadd_front
+
+/*
+#include <stdio.h>
+
+int		main(void)
+{
+	t_list	*head = ft_lstnew("Hello World");
+	t_list	*t1;
+
+	t1->content = (char *)"banana";
+	head->next = &t1;
+	ft_lstadd_front(&head, ft_lstnew((char *) "new"));
+	t_list	*it;
+
+	it = head;
+	while (it != NULL)
+	{
+		printf("%s\n", (char *)it->content);
+		it = it->next;
+	}
+*/
+
+// Teste ft_lstsize
+
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	t_list *head = NULL;
+	t_list *node1 = ft_lstnew((int *)10);
+	t_list *node2 = ft_lstnew((int *)20);
+	t_list *node3 = ft_lstnew((int *)30);
+
+	node1->next = node2;
+	node2->next = node3;
+	head = node1;
+	printf("%d\n", ft_lstsize(head));
+}*/
+
+// Teste ft_lstlast
+
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	t_list *head = NULL;
+	t_list *node1 = ft_lstnew("hello");
+	t_list *node2 = ft_lstnew("world");
+	t_list *node3 = ft_lstnew("banana");
+
+	node1->next = node2;
+	node2->next = node3;
+	head = node1;
+	t_list *res = ft_lstlast(head);
+	if (res != NULL)
+	{
+		printf("The last node: %s", (char *)res->content);
+	}
+}*/
