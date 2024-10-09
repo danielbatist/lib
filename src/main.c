@@ -536,7 +536,74 @@ int     main(void)
 }
 */
 
+
+// Teste ft_calloc
+
+/*
+int     main(void)
+{
+        printf("Teste 01\n");
+        size_t  n1 = 5;
+        int     *arr1 = (int *)ft_calloc(n1 , sizeof(int));
+        if (arr1 != NULL && n1 > 0)
+        {
+                for (size_t i = 0; i < n1; i++)
+                {
+                        printf("%i", arr1[i]);
+                }
+        }
+        else
+        {
+                printf("memory allocation failure");
+        }
+        free(arr1);
+
+        printf("\n\n");
+
+        printf("Teste 02\n");
+        size_t  n2 = 4294967296;
+        int     *arr2 = (int *)ft_calloc(n2 , 4294967296);
+        if (arr2 != NULL && n2 > 0)
+        {
+                for (size_t i = 0; i < n2; i++)
+                {
+                        printf("%i", arr2[i]);
+                }
+        }
+        else
+        {
+                printf("memory allocation failure");
+        }
+        free(arr2);
+
+        printf("\n\n");
+
+        printf("Teste 03\n");
+        size_t  n3 = 0;
+        int     *arr3 = (int *)ft_calloc(n3 , 4);
+        if (arr3 != NULL && n3 > 0)
+        {
+                for (size_t i = 0; i < n3; i++)
+                {
+                        printf("%i", arr3[i]);
+                }
+        }
+        else
+        {
+                printf("memory allocation failure");
+        }
+        free(arr3);
+
+        printf("\n\n");
+
+
+        
+        return(0);
+}
+*/
+
 // Teste ft_strdup
+
 /*
 int     main(void)
 {
@@ -604,71 +671,8 @@ int     main(void)
 
         printf("\n");
         return (0);
-}*/
-
-// Teste ft_calloc
-
-/*
-int     main(void)
-{
-        printf("Teste 01\n");
-        size_t  n1 = 5;
-        int     *arr1 = (int *)ft_calloc(n1 , sizeof(int));
-        if (arr1 != NULL && n1 > 0)
-        {
-                for (size_t i = 0; i < n1; i++)
-                {
-                        printf("%i", arr1[i]);
-                }
-        }
-        else
-        {
-                printf("memory allocation failure");
-        }
-        free(arr1);
-
-        printf("\n\n");
-
-        printf("Teste 02\n");
-        size_t  n2 = 4294967296;
-        int     *arr2 = (int *)ft_calloc(n2 , 4294967296);
-        if (arr2 != NULL && n2 > 0)
-        {
-                for (size_t i = 0; i < n2; i++)
-                {
-                        printf("%i", arr2[i]);
-                }
-        }
-        else
-        {
-                printf("memory allocation failure");
-        }
-        free(arr2);
-
-        printf("\n\n");
-
-        printf("Teste 03\n");
-        size_t  n3 = 0;
-        int     *arr3 = (int *)ft_calloc(n3 , 4);
-        if (arr3 != NULL && n3 > 0)
-        {
-                for (size_t i = 0; i < n3; i++)
-                {
-                        printf("%i", arr3[i]);
-                }
-        }
-        else
-        {
-                printf("memory allocation failure");
-        }
-        free(arr3);
-
-        printf("\n\n");
-
-
-        
-        return(0);
-}*/
+}
+*/
 
 // Teste ft_substr
 
@@ -699,7 +703,8 @@ int		main(void)
 */
 
 // Teste ft_strtrim
- /*
+
+/*
  int		main(void)
 {
 	char	*str = "        Hello World         ";
@@ -708,7 +713,29 @@ int		main(void)
 	printf("res:%s\n", res);
 	return (0);
 }
- */
+*/
+
+// Teste ft_split
+
+/*
+#include <stdio.h>
+
+int		main(void)
+{
+	char	*str = "Hello;world;this;is;test;banana;42;rio";
+	char	set = ';';
+	char	**res = ft_split(str, set);
+	int		i;
+
+	i = 0;
+	while (res[i])
+	{
+		printf ("str[%i] : %s\n", i, res[i]);
+		i++;
+	}
+	return (0);
+}
+*/
 
 // Teste ft_itoa
 
@@ -718,27 +745,6 @@ int	main(void)
 	int		num = -123454596;
 	char	*res = ft_itoa(num);
 	printf("num: %s\n", res);
-	return (0);
-}
-*/
-
-// Teste ft_striteri
-
-/*
-void	ft_upper(unsigned int i, char * c)
-{
-	(void)i;
-	if (*c >= 'a' && *c <= 'z')
-	{
-		*c -= 32;
-	}
-}
-
-int		main(void)
-{
-	char	str[] = "hello world";
-	ft_striteri(str, ft_upper);
-	printf("%s\n", str);
 	return (0);
 }
 */
@@ -764,26 +770,67 @@ int		main(void)
 }
 */
 
-// Teste ft_split
+// Teste ft_striteri
 
 /*
-#include <stdio.h>
-
+void	ft_upper(unsigned int i, char * c)
+{
+	(void)i;
+	if (*c >= 'a' && *c <= 'z')
+	{
+		*c -= 32;
+	}
+}
 int		main(void)
 {
-	char	*str = "Hello;world;this;is;test;banana;42;rio";
-	char	set = ';';
-	char	**res = ft_split(str, set);
-	int		i;
-
-	i = 0;
-	while (res[i])
-	{
-		printf ("str[%i] : %s\n", i, res[i]);
-		i++;
-	}
+	char	str[] = "hello world";
+	ft_striteri(str, ft_upper);
+	printf("%s\n", str);
 	return (0);
-}*/
+}
+*/
+
+// Teste ft_putchar_fd
+
+/*
+int		main(void)
+{
+	ft_putchar_fd('a', 1);
+	ft_putchar_fd('\n', 1);
+}*
+
+// Teste ft_putstr_fd
+
+/*
+int	main(void)
+{
+	char	str[] = "Hello World";
+	ft_putstr_fd(str, 1);
+}
+*/
+
+// Teste ft_putendl_fd
+
+/*
+int	main(void)
+{
+	char	str[] = "Hello World";
+	ft_putendl_fd(str, 1);
+}
+*/
+
+// Teste ft_putnbr_fd
+
+/*
+int	main(void)
+{
+	ft_putnbr_fd(42, 1);
+	printf("\n");
+	ft_putnbr_fd(-2147483648, 1);
+}
+*/
+___________________________________________________________________
+//\\//\\//\\//\\//\\//\\//\\//BONUS\\//\\//\\//\\//\\//\\//\\//\\//
 
 // Teste ft_lstnew
 

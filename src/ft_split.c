@@ -6,14 +6,14 @@
 /*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 23:46:01 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/08 18:10:38 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/09 19:40:14 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-size_t	ft_conts(const char *str, char set)
+static	size_t	ft_conts(const char *str, char set)
 {
 	size_t	i;
 	size_t	conts;
@@ -32,7 +32,7 @@ size_t	ft_conts(const char *str, char set)
 	return (conts);
 }
 
-char	*ft_pull(const char *str, size_t i, char set)
+static	char	*ft_pull(const char *str, size_t i, char set)
 {
 	char	*res;
 	size_t	j;
@@ -40,22 +40,20 @@ char	*ft_pull(const char *str, size_t i, char set)
 
 	j = 0;
 	len = 0;
-	while (str[i + len] && str[i + len] == set)
+	while (str[i + len] && str[i + len] != set)
 		len++;
 	res = malloc((len + 1) * sizeof(char));
 	if (!res)
 		return (NULL);
 	while (str[i] && str[i] != set)
 	{
-		res[j] = str[i];
-		i++;
-		j++;
+		res[j++] = str[i++];
 	}
 	res[j] = '\0';
 	return (res);
 }
 
-void	ft_free_all(char **mat, size_t world_str)
+static	void	ft_free_all(char **mat, size_t world_str)
 {
 	size_t	i;
 
@@ -68,7 +66,7 @@ void	ft_free_all(char **mat, size_t world_str)
 	free(mat);
 }
 
-size_t	pro_str(char **mat, const char *str, size_t *w_str, char set)
+static	size_t	pro_str(char **mat, const char *str, size_t *w_str, char set)
 {
 	size_t	i;
 
@@ -88,7 +86,16 @@ char	**ft_split(char const *str, char set)
 	int		i;
 	char	**mat;
 	size_t	world_str;
-
+	if (!str)
+		return (NULL);
+	if (set == 0)
+	{
+		mat = malloc(sizeof(char *));
+		if (mat == NULL)
+			return (NULL);
+		mat[0] = NULL;
+		return (mat);
+	}
 	mat = malloc((ft_conts(str, set) + 1) * sizeof(char *));
 	if (!mat)
 		return (NULL);
