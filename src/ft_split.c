@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 23:46:01 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/09 19:40:14 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/10 08:41:11 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@ static	size_t	ft_conts(const char *str, char set)
 
 	i = 0;
 	conts = 0;
+	if (set == '\0')
+		return (1);
+	if (*str == '\0')
+		return (conts);
 	while (str[i])
 	{
 		while (str[i] && str[i] == set)
@@ -86,16 +90,9 @@ char	**ft_split(char const *str, char set)
 	int		i;
 	char	**mat;
 	size_t	world_str;
+
 	if (!str)
 		return (NULL);
-	if (set == 0)
-	{
-		mat = malloc(sizeof(char *));
-		if (mat == NULL)
-			return (NULL);
-		mat[0] = NULL;
-		return (mat);
-	}
 	mat = malloc((ft_conts(str, set) + 1) * sizeof(char *));
 	if (!mat)
 		return (NULL);

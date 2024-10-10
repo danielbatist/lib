@@ -906,4 +906,5 @@ int	main(void)
 	{
 		printf("The last node: %s", (char *)res->content);
 	}
-}*/
+}
+*/

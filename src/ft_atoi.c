@@ -6,7 +6,7 @@
 /*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 23:08:20 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/02 21:12:46 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/10 09:29:52 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ int	ft_atoi(const char *str)
 	int		tmp;
 
 	i = 0;
-	while (str[i] <= ' ')
+	if (!str)
+		return (0);
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' 
+		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
 		i++;
 	sign = 1;
 	tmp = 0;
@@ -37,5 +40,8 @@ int	ft_atoi(const char *str)
 	{
 		result = result * 10 + (str[i++] - '0');
 	}
+	if (str[i] && (str[i] <= '0' || str[i] >= '9'))
+		return (0);
 	return (sign * result);
 }
+
