@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 22:40:09 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/09 00:08:38 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:06:00 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return ((char *)sub);
 	}
 	if (len > s_len - start)
-	{
 		len = s_len - start;
-	}
 	sub = malloc((len + 1) * sizeof(char));
 	if (sub == NULL)
 		return (NULL);
