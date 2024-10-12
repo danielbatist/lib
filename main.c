@@ -677,15 +677,7 @@ int     main(void)
 // Teste ft_substr
 
 /*
-int		main(void)
-{
-	char const	*str = "Hello World";
-	unsigned int	pos = 6;
-	char	*res = ft_substr(str, pos, 5);
-	printf("string: %s\n", str);
-	printf("substring: %s\n", res);
-	return (0);
-}
+
 */
 
 // Teste ft_strjoin
