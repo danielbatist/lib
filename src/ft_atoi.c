@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 23:08:20 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/10 20:46:47 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 10:51:04 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,8 @@ int	ft_atoi(const char *str)
 
 /*
 #include <stdio.h>
-#include <stdlib.h>
 int     main(void)
 {
     const char  str[] = " +-123";
-    printf("%i\n", atoi(str));
     printf("%i\n", ft_atoi(str));
 }*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:12:36 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/09 18:14:19 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:33:10 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,24 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *)s);
 }
+
+/*
+#include <stdio.h>
+
+int     main(void)
+{
+        const char str[] = "Hello World";
+        int     letter = 'y';
+        char    *result = ft_strchr(str, letter);
+
+        if (result != NULL)
+        {
+            printf("Position: %ld\n" , result - str);
+        }
+        else{
+            printf("Character %c not found\n", letter);
+        }
+
+        return (0);
+}
+*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 10:32:40 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/03 11:32:33 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:35:56 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(str, s2, (s1_len + s2_len + 1));
 	return (str);
 }
+
+/*#include <stdio.h>
+int		main(void)
+{
+	char	*str1 = "Hello ";
+	char	*str2 = "World";
+	char	*res = ft_strjoin(str1, str2);
+	printf("New string: %s\n", res);
+	free(res);
+	return (0);
+}
+*/

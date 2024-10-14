@@ -6,29 +6,25 @@
 /*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 22:40:09 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/11 23:49:09 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 12:11:54 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	char	*ft_subcpy(char const *str, unsigned int start, size_t len)
+static	char	*ft_subcpy(char *s, char const *st, unsigned int ini, size_t l)
 {
-	unsigned char	*sub;
 	size_t			i;
 
-	sub = malloc((len + 1) * sizeof(char));
-	if (!sub)
-		return (NULL);
 	i = 0;
-	while (str[start] && i < len)
+	while (st[ini] && i < l)
 	{
-		sub[i] = str[start];
+		s[i] = st[ini];
 		i++;
-		start++;
+		ini++;
 	}
-	sub[i] = '\0';
-	return ((char *)sub);
+	s[i] = '\0';
+	return (s);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
@@ -52,7 +48,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub = malloc((len + 1) * sizeof(char));
 	if (sub == NULL)
 		return (NULL);
-	sub = ft_subcpy(s, start, len);
+	ft_subcpy(sub, s, start, len);
 	return (sub);
 }
 

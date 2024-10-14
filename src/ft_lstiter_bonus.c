@@ -6,7 +6,7 @@
 /*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 23:03:22 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/12 23:03:25 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:06:51 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 }
 
 /*
-#include <stdio.h>
 #include <stdio.h>
 int     main(void)
 {

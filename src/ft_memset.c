@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:10:24 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/02 11:12:25 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:20:19 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,13 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+
+/*#include <stdio.h>
+int     main(void)
+{
+        char    str[15] = "Hello World";
+        int     chr = '.';
+        printf("%s\n", ft_memset(str, chr, 5));
+        return(0);
+}
+*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:30:03 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/02 11:30:51 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:39:26 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,12 @@ size_t	ft_strlen(const char *str)
 	}
 	return (i);
 }
+
+/*#include <stdio.h>
+int     main(void)
+{
+        char    str[] = "Hello World";
+        printf("%zu\n", ft_strlen(str));
+        return (0);
+}
+*/

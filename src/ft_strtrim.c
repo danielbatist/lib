@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 11:51:28 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/08 16:04:54 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:36:40 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(str, &s1[start], (end - start + 1));
 	return (str);
 }
+
+/*#include <stdio.h>
+ int		main(void)
+{
+	char	*str = "        Hello World         ";
+	char	*set  = " ";
+	char	*res = ft_strtrim(str, set);
+	printf("res:%s\n", res);
+	return (0);
+}
+*/

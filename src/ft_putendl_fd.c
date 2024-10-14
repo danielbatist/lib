@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 00:40:07 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/09 15:46:11 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:28:08 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,11 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putstr_fd(s, fd);
 	ft_putstr_fd("\n", fd);
 }
+
+/*#include <stdio.h>
+int	main(void)
+{
+	char	str[] = "Hello World";
+	ft_putendl_fd(str, 1);
+}
+*/

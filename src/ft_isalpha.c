@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 10:39:52 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/02 10:41:35 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 10:56:59 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,20 @@ int	ft_isalpha(int c)
 		return (0);
 	}
 }
+
+/*#include <stdio.h>
+int     main(void)
+{
+        char    c = 'a';
+        if (ft_isalpha(c) != 0)
+        {
+                printf("%c is an alphabetic character\n", c);
+        }
+        else
+        {
+                printf("%c is not an alphabetic character\n", c);
+        }
+
+        return (0);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:21:09 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/02 22:35:48 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:38:58 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,23 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	return (ft_strlen(src));
 }
+
+/*#include <stdio.h>
+int     main(void)
+{
+        char    dst[15];
+        const char  src[] = "Hello World";
+        size_t result = ft_strlcpy(dst, src, sizeof(dst));
+        if (sizeof(dst) < result)
+        {
+                printf("string truncation\n");
+                printf("%s\n", dst);
+                printf("%zu\n", result);
+        }
+        else
+        {
+                printf("%s\n", dst);
+                printf("%zu\n", result);
+        }
+}
+*/

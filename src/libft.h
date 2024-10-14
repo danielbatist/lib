@@ -6,14 +6,13 @@
 /*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 23:40:50 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/12 20:04:58 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 10:49:50 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
 
 typedef struct s_list

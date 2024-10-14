@@ -6,12 +6,12 @@
 /*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 23:02:42 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/13 01:01:15 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 10:47:40 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+/*#include <stdio.h>
 void	ft_print(void *content)
 {
 	printf("%s\n", (char *)content);
@@ -36,7 +36,7 @@ void	*ft_lstup(void *content)
 void	del(void *content)
 {
 	free(content);
-}
+}*/
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -60,7 +60,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (new_list);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int     main(void)
 {
@@ -80,4 +80,4 @@ int     main(void)
 	ft_lstclear(&head, del);
 	ft_lstclear(&new_list, del);
 	return (0);
-}
+}*/

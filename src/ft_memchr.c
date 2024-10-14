@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 10:56:06 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/02 11:09:10 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:24:26 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,20 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+/*#include <stdio.h>
+int     main(void)
+{
+    char    str[] = "Hello World";
+    char    ocr = 'o';
+    char    *result = ft_memchr(str, ocr, 10);
+    if (result != NULL)
+    {
+        printf("position: %ld\n", result - str);
+    }
+    else
+    {
+    printf("The character %c not a found.\n", ocr);
+    }
+}
+*/

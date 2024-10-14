@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 14:57:34 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/09 13:56:27 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:00:43 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,3 +55,13 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+
+/*#include <stdio.h>
+int	main(void)
+{
+	int		num = -123454596;
+	char	*res = ft_itoa(num);
+	printf("num: %s\n", res);
+	return (0);
+}
+*/

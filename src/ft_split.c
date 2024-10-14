@@ -6,7 +6,7 @@
 /*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 23:46:01 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/10 08:41:11 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 12:20:32 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,6 @@ static	size_t	ft_conts(const char *str, char set)
 
 	i = 0;
 	conts = 0;
-	if (set == '\0')
-		return (1);
-	if (*str == '\0')
-		return (conts);
 	while (str[i])
 	{
 		while (str[i] && str[i] == set)
@@ -110,3 +106,23 @@ char	**ft_split(char const *str, char set)
 	mat[world_str] = NULL;
 	return (mat);
 }
+
+/*
+#include <stdio.h>
+
+int		main(void)
+{
+	char	*str = "Hello;world;this;is;test;banana;42;rio";
+	char	set = ';';
+	char	**res = ft_split(str, set);
+	int		i;
+
+	i = 0;
+	while (res[i])
+	{
+		printf ("str[%i] : %s\n", i, res[i]);
+		i++;
+	}
+	return (0);
+}
+*/

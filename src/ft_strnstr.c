@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:32:32 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/02 11:53:05 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:40:43 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,18 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+
+//#include <stdio.h>
+/*
+ int    main(void)
+ {
+        const char hay[] = "Hello";
+        const char needle[] = "Hello World";
+        char *result = ft_strnstr(hay, needle, 13);
+        if (result != NULL)
+            printf("substring %s found: %s.\n", needle, result);
+        else
+            printf("substring %s not found.\n", needle);
+        return (0);
+ }
+ */

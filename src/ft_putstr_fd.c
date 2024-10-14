@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 00:30:09 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/09 15:46:04 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:27:46 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,11 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
+
+/*#include <stdio.h>
+int	main(void)
+{
+	char	str[] = "Hello World";
+	ft_putstr_fd(str, 1);
+}
+*/

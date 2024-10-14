@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 // Teste ft_isalpha
-/*
+/*#include <stdio.h>
 int     main(void)
 {
         char    c = 'a';
@@ -21,7 +21,7 @@ int     main(void)
 
 // Teste ft_isdigit
 
-/*
+/*#include <stdio.h>
 int     main(void)
 {
         int     num = 9;
@@ -36,7 +36,7 @@ int     main(void)
 }*/
 
 // Teste ft_isalnum
-/*
+/*#include <stdio.h>
 int     main(void)
 {
         int     alnum1 = '7';
@@ -58,7 +58,7 @@ int     main(void)
 }*/
 
 // Teste ft_isascii
-/*
+/*#include <stdio.h>
 int     main(void)
 {
         unsigned char     asc1 = 57; // character '9'
@@ -80,30 +80,11 @@ int     main(void)
 }*/
 
 // Teste ft_isprint
-/*
-int     main(void)
-{
-        unsigned char     imp1 = '\n'; // character '9'
-        unsigned char     imp2 = 32; // character ' '
-        unsigned char     imp3 = '\t'; // character 'é'
 
-        if (ft_isprint(imp1) != 0)
-                printf("%i is a printable character\n", imp1);
-        else
-                printf("%i is not a printable character\n", imp1);
-        if (ft_isprint(imp2) != 0)
-                printf("%i is a printable character\n", imp2);
-        else
-                printf("%i is not a printable character\n", imp2);
-        if (ft_isprint(imp3) != 0)
-                printf("%i is a printable character\n", imp3);
-        else
-                printf("%i is not a printable character\n", imp3);
-}*/
 
 // Teste ft_strlen
 
-/*
+/*#include <stdio.h>
 int     main(void)
 {
         char    str[] = "Hello World";
@@ -114,7 +95,7 @@ int     main(void)
 
 // Teste ft_strlcpy
 
-/*
+/*#include <stdio.h>
 int     main(void)
 {
         char    dst[15];
@@ -136,19 +117,17 @@ int     main(void)
 
 // Teste ft_atoi
 
-/*
-#include <stdlib.h>
+/*#include <stdio.h>
 int     main(void)
 {
     const char  str[] = "   +-1234";
-    printf("%i\n", atoi(str));
     printf("%i\n", ft_atoi(str));
 }
 */
 
 // Teste ft_strlcat
 
-/*
+/*#include <stdio.h>
 int     main(void)
 {
     char    dst[8] = "Hello ";
@@ -170,7 +149,7 @@ int     main(void)
 
 // Teste ft_strncmp
 
-/*
+/*#include <stdio.h>
 int     main(void)
 {
         const char  str1[] = "Hello";
@@ -186,7 +165,7 @@ int     main(void)
 
 // Teste ft_toupper
 
-/*
+/*#include <stdio.h>
 int     main(void)
 {
         char    letter = 'a';
@@ -201,7 +180,7 @@ int     main(void)
 
 // Teste ft_tolower
 
-/*
+/*#include <stdio.h>
 int     main(void)
 {
         char    letter = 'L';
@@ -227,7 +206,7 @@ int     main(void)
 
         if (result != NULL)
         {
-            printf("Character %c found at position: %ld\n", letter, result - str);
+            printf("Position: %ld\n" , result - str);
         }
         else{
             printf("Character %c not found\n", letter);
@@ -250,7 +229,7 @@ int     main(void)
 
         if (result != NULL)
         {
-            printf("The last position of the character %c%c%c is:  %ld\n", '"', letter, '"', result - str);
+            printf("Position :  %ld\n" , result - str);
         }
         else{
             printf("Character %c not found\n", letter);
@@ -280,7 +259,7 @@ int     main(void)
 
 // Teste ft_memset
 
-/*
+/*#include <stdio.h>
 int     main(void)
 {
         char    str[15] = "Hello World";
@@ -292,7 +271,7 @@ int     main(void)
 
 // Teste ft_bzero
 
-/*
+/*#include <stdio.h>
 int     main(void)
 {
         //Teste 1
@@ -330,96 +309,13 @@ int     main(void)
                 printf("%c", str2[i]);
             i++;
         }
-        printf("\n");
-        printf("\n");
-
-        //Teste 3
-        printf("Teste 3\n"); 
-        char        str3[1] = "";
-
-        printf("Before: %s\n", str3);
-        ft_bzero(str3, 0);
-        i = 0;
-        printf("After: ");
-        while (i < sizeof(str3))
-        {
-            if (str3[i] == '\0')
-                printf("\\0");
-            else
-                printf("%c", str3[i]);
-            i++;
-        }
-        printf("\n");
-        printf("\n");
-
-        //Teste 4
-        printf("Teste 4\n"); 
-        char        str4[6] = "Daniel";
-
-        printf("Before: %s\n", str4);
-        ft_bzero(str4, 0);
-        i = 0;
-        printf("After: ");
-        while (i < sizeof(str4))
-        {
-            if (str4[i] == '\0')
-                printf("\\0");
-            else
-                printf("%c", str4[i]);
-            i++;
-        }
-        printf("\n");
-        printf("\n");
-
-        //Teste 5
-        printf("Teste 5\n"); 
-        char        str5[11] = "abcdefghij";
-        printf("Before: %s\n", str5);
-        ft_bzero(str5, 20);
-        i = 0;
-        printf("After: ");
-        while (i < sizeof(str5))
-        {
-            if (str5[i] == '\0')
-                printf("\\0");
-            else
-                printf("%c", str5[i]);
-            i++;
-        }
-        printf("\n");
-        printf("\n");
-
-        //Teste 6
-        printf("Teste 6\n"); 
-        int     str6[5] = {1, 2, 3, 4, 5};
-        
-        i = 0;
-        printf("Before: ");
-        while (i < 5)
-        {
-            printf("%d", str6[i]);
-            i++;
-        }
-        printf("\n");
-        ft_bzero(str6, sizeof(str6));
-        i = 0;
-        printf("After: ");
-        while (i < 5)
-        {
-            if (str6[i] == '\0')
-                printf("\\0");
-            else
-                printf("%d", str6[i]);
-            i++;
-        }
-        printf("\n");
         return (0);
 }
 */
 
 // Teste ft_memcpy
 
-/*
+/*#include <stdio.h>
 int     main(void)
 {
     // Teste 01
@@ -461,7 +357,7 @@ int     main(void)
 
 // ft_memmove
 
-/*
+/*#include <stdio.h>
 int     main(void)
 {
         printf("Teste 01: ");
@@ -495,7 +391,7 @@ int     main(void)
 
 // Teste ft_memchr
 
-/*
+/*#include <stdio.h>
 int     main(void)
 {
         char    str[] = "Hello World";
@@ -503,20 +399,18 @@ int     main(void)
         char    *result = ft_memchr(str, ocr, 10);
         if (result != NULL)
         {
-            printf("The first occurrence of %c is in the position: %ld\n", ocr, result - str);
+            printf("position: %ld\n", result - str);
         }
         else
         {
         printf("The character %c not a found.\n", ocr);
         }
-
-    
 }
 */
 
 // Teste ft_memcmp
 
-/*
+/*#include <stdio.h>
 int     main(void)
 {
         char    str1[] = "Hello World";
@@ -539,7 +433,7 @@ int     main(void)
 
 // Teste ft_calloc
 
-/*
+/*#include <stdio.h>
 int     main(void)
 {
         printf("Teste 01\n");
@@ -604,7 +498,7 @@ int     main(void)
 
 // Teste ft_strdup
 
-/*
+/*#include <stdio.h>
 int     main(void)
 {
         printf("Teste 01\n");
@@ -636,40 +530,6 @@ int     main(void)
             printf("Error!");
         }
         free(cpy2);
-
-        printf("\n\n");
-
-        printf("Teste 03\n");
-        char str3[] = "Lebenslanger Schicksalschatz";
-        char    *cpy3 = ft_strdup(str3);
-        printf("str3: %s\n", str3);
-        if (cpy3 != NULL)
-        {
-            printf("cpy3: %s", cpy3);
-        }
-        else
-        {
-            printf("Error!");
-        }
-        free(cpy3);
-
-        printf("\n\n");
-
-        printf("Teste 04\n");
-        char str4[] = "A very long string to check if the allocation and copying are correct";
-        char    *cpy4 = ft_strdup(str4);
-        printf("str4: %s\n", str4);
-        if (cpy4 != NULL)
-        {
-            printf("cpy4: %s", cpy4);
-        }
-        else
-        {
-            printf("Error!");
-        }
-        free(cpy4);
-
-        printf("\n");
         return (0);
 }
 */
@@ -677,12 +537,20 @@ int     main(void)
 // Teste ft_substr
 
 /*
-
-*/
+#include <stdio.h>
+int		main(void)
+{
+	char const	*str = "Hello World";
+	unsigned int	pos = 6;
+	char	*res = ft_substr(str, pos, 5);
+	printf("string: %s\n", str);
+	printf("substring: %s\n", res);
+	return (0);
+}*/
 
 // Teste ft_strjoin
 
-/*
+/*#include <stdio.h>
 int		main(void)
 {
 	char	*str1 = "Hello ";
@@ -696,7 +564,7 @@ int		main(void)
 
 // Teste ft_strtrim
 
-/*
+/*#include <stdio.h>
  int		main(void)
 {
 	char	*str = "        Hello World         ";
@@ -731,7 +599,7 @@ int		main(void)
 
 // Teste ft_itoa
 
-/*
+/*#include <stdio.h>
 int	main(void)
 {
 	int		num = -123454596;
@@ -743,7 +611,7 @@ int	main(void)
 
 // Teste ft_strmapi
 
-/*
+/*#include <stdio.h>
 char	ft_upper(unsigned int i, char c)
 {
 	(void)i;
@@ -764,7 +632,7 @@ int		main(void)
 
 // Teste ft_striteri
 
-/*
+/*#include <stdio.h>
 void	ft_upper(unsigned int i, char * c)
 {
 	(void)i;
@@ -784,7 +652,7 @@ int		main(void)
 
 // Teste ft_putchar_fd
 
-/*
+/*#include <stdio.h>
 int		main(void)
 {
 	ft_putchar_fd('a', 1);
@@ -793,7 +661,7 @@ int		main(void)
 
 // Teste ft_putstr_fd
 
-/*
+/*#include <stdio.h>
 int	main(void)
 {
 	char	str[] = "Hello World";
@@ -803,7 +671,7 @@ int	main(void)
 
 // Teste ft_putendl_fd
 
-/*
+/*#include <stdio.h>
 int	main(void)
 {
 	char	str[] = "Hello World";
@@ -813,7 +681,7 @@ int	main(void)
 
 // Teste ft_putnbr_fd
 
-/*
+/*#include <stdio.h>
 int	main(void)
 {
 	ft_putnbr_fd(42, 1);
@@ -860,6 +728,57 @@ int		main(void)
 	}
 */
 
+// Teste ft_lstadd_back
+
+/*
+#include <stdio.h>
+
+int		main(void)
+{
+	t_list	*head = ft_lstnew("Hello");
+	t_list	*node1 = ft_lstnew("World");
+    t_list	*node2 = ft_lstnew("Daniel");
+	
+	ft_lstadd_back(&head, node1);
+	ft_lstadd_back(&head, node2);
+	
+	while (head != NULL)
+	{
+		printf("%s\n", (char *)head->content);
+		head = head->next;
+	}
+    return (0);
+}*/
+
+// Teste ft_lstclear
+
+/*
+#include <stdio.h>
+
+int     main(void)
+{
+	t_list	*tmp;
+        t_list	*head = ft_lstnew(strdup("Hello"));
+	t_list	*node1 = ft_lstnew(strdup("World"));
+	t_list	*node2 = ft_lstnew(strdup("Daniel"));
+
+	head->next = node1;
+	node1->next = node2;
+	node2->next = NULL;
+	tmp = head;
+	printf("Before Cleared:\n");
+	while (tmp != NULL)
+	{
+		printf("%s\n", (char *)tmp->content);
+		tmp = tmp->next;
+	}
+	ft_lstclear(&head, del);
+	printf("After Cleared:\n");
+	if (head == NULL)
+		printf("List is cleared.\n");
+	return (0);
+}*/
+
 // Teste ft_lstsize
 
 /*
@@ -876,6 +795,85 @@ int	main(void)
 	node2->next = node3;
 	head = node1;
 	printf("%d\n", ft_lstsize(head));
+}*/
+
+// Teste ft_delone
+/*
+void	del(void *content)
+{
+	free(content);
+}*/
+/*
+#include <stdio.h>
+
+int     main(void)
+{
+	t_list	*tmp;
+        t_list	*head = ft_lstnew(strdup("Hello"));
+	t_list	*node1 = ft_lstnew(strdup("World"));
+	t_list	*node2 = ft_lstnew(strdup("Daniel"));
+
+	head->next = node1;
+	node1->next = node2;
+	node2->next = NULL;
+	tmp = head;
+	printf("Before delection:\n");
+	while (tmp != NULL)
+	{
+		printf("%s\n", (char *)tmp->content);
+		tmp = tmp->next;
+	}
+	
+	ft_lstdelone(node1, del);
+	
+	head->next = node2;
+	tmp = head;
+	printf("After delection:\n");
+	while (tmp != NULL)
+	{
+		printf("%s\n", (char *)tmp->content);
+		tmp = tmp->next;
+	}
+	ft_lstdelone(head, del);
+	ft_lstdelone(node2, del);
+    return (0);
+}*/
+
+// Teste ft_lstiter
+/*
+#include <stdio.h>
+void	ft_print(void *content)
+{
+	printf("%s\n", (char *)content);
+}
+
+void	ft_lstup(void *content)
+{
+	char	*str = (char *)content;
+
+	while (*str)
+	{
+		*str = ft_toupper(*str);
+		str++;
+	}
+}*/
+/*
+#include <stdio.h>
+int     main(void)
+{
+        t_list	*head = ft_lstnew(strdup("hello"));
+	t_list	*node1 = ft_lstnew(strdup("world"));
+	t_list	*node2 = ft_lstnew(strdup("daniel"));
+
+	head->next = node1;
+	node1->next = node2;
+	node2->next = NULL;
+	printf("Before Uppercase\n");
+	ft_lstiter(head, ft_print);
+	ft_lstiter(head, ft_lstup);
+	printf("After Uppercase\n");
+	ft_lstiter(head, ft_print);
+	return (0);
 }*/
 
 // Teste ft_lstlast

@@ -6,7 +6,7 @@
 /*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:49:42 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/02 22:22:26 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:42:00 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,24 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return ((char *)last);
 }
+
+/*
+#include <stdio.h>
+
+int     main(void)
+{
+        const char str[] = "Hello World";
+        int     letter = 'l';
+        char    *result = ft_strrchr(str, letter);
+
+        if (result != NULL)
+        {
+            printf("Position :  %ld\n" , result - str);
+        }
+        else{
+            printf("Character %c not found\n", letter);
+        }
+
+        return (0);
+}
+*/

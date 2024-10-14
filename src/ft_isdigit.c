@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbatista <dbatista@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbatista <dbatista@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 10:51:49 by dbatista          #+#    #+#             */
-/*   Updated: 2024/10/02 10:52:57 by dbatista         ###   ########.fr       */
+/*   Updated: 2024/10/14 10:59:01 by dbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,17 @@ int	ft_isdigit(int c)
 		return (0);
 	}
 }
+
+/*#include <stdio.h>
+int     main(void)
+{
+        int     num = 9;
+        if (ft_isdigit(num) != 0)
+        {
+                printf("%i it's an number\n", num);
+        }
+        else
+        {
+                printf("%i it's not a number\n", num);
+        }
+}*/
